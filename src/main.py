@@ -1,8 +1,8 @@
 import argparse
 from commands import new, run, build, get
 
+# CLI information
 __version__ = "0.1"
-
 __description__ = "Lovr is a command line interface that manages LÖVE2D projects"
 
 # Create the parser
@@ -20,14 +20,15 @@ args = parser.parse_args()
 
 # Use the arguments
 if args.new:
-    new_project = new.New(args.new);
+    new_project = new.New(args.new)
     new_project.new_project()
     
 if args.run:
-    pass
+    run_project = run.Run()
+    run_project.run_love_project()
 
 if args.build:
-    pass
+    build_project = build.Build()
 
 if args.get:
-    pass
+    get_library = get.Get(args.get)
