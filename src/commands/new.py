@@ -13,13 +13,13 @@ class New:
             os.makedirs(self.project_name)
             print(f"'{self.project_name}' directory has been created.")
             
-            self.__create_sub_directories__()
-            self.__create_sub_files__()
+            self._create_sub_directories()
+            self._create_sub_files()
         else:
             print(f"'{self.project_name}' directory already exists.")
 
     # Creates the sub directories located within the project directory
-    def __create_sub_directories__(self):
+    def _create_sub_directories(self):
         directory_names = ['assets', 'build', 'lib', 'src']
         assets_sub_directory_names = ['audio', 'maps', 'sprites']
         
@@ -36,7 +36,7 @@ class New:
                     print(f"'{project_sub_directory_path}' directory has been created.")    
     
     # Creates the files (main.lua and config.lua) with in the project directory
-    def __create_sub_files__(self):
+    def _create_sub_files(self):
         source_files = ['main.txt', 'config.txt']
         destination_files = ['main.lua', 'config.lua']
         
