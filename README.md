@@ -1,6 +1,6 @@
 # LOVR
 
-lovr is a command line interface that initializes, manages, runs, builds LÖVE2D projects.
+lovr is a command line interface that manages LÖVE2D projects.
 
 ## Getting Started
 
@@ -15,10 +15,6 @@ Make sure you have the latest version of [LÖVE2D]("https://love2d.org/") instal
 ### Initialize with Project Name
 
     lovr --new [new-löve2d-project-name]
-
-### Run Project
-
-    lovr --run
 
 ## Commands
 
@@ -45,10 +41,6 @@ Initializes a new LÖVE2D project.
     ├── src/            # Source files
     ├── conf.lua        # LÖVE2D configuration file
     └── main.lua        # Main file
-
-### run
-
-Runs the LÖVE2D project.
 
 ### build
 

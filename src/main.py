@@ -1,5 +1,5 @@
 import argparse
-from commands import new, run, build, get
+from commands import new, build, get
 
 # CLI information
 __version__ = "0.1"
@@ -11,7 +11,6 @@ parser = argparse.ArgumentParser(description=__description__)
 # Add arguments
 parser.add_argument('-v', '--version', action='version', version=f'%(prog)s {__version__}', help="show the current version of lovr")
 parser.add_argument('-n', '--new', type=str, help="initializes a new LÖVE2D project")
-parser.add_argument('-r', '--run', action='store_true', help="runs the LÖVE2D project")
 parser.add_argument('-b', '--build', action='store_true', help="builds the LÖVE2D project into the builds directory")
 parser.add_argument('-g', '--get', type=str, help="gets and stores third-party libraries in the lib directory")
 
@@ -22,13 +21,10 @@ args = parser.parse_args()
 if args.new:
     new_project = new.New(args.new)
     new_project.new_project()
-    
-if args.run:
-    run_project = run.Run()
-    run_project.run_love_project()
 
 if args.build:
     build_project = build.Build()
+    build_project.build_love_project()
 
 if args.get:
     get_library = get.Get(args.get)
