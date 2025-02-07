@@ -28,3 +28,4 @@ if args.build:
 
 if args.get:
     get_library = get.Get(args.get)
+    get_library.get_third_party_library()

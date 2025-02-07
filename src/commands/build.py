@@ -8,4 +8,10 @@ class Build:
         pass
     
     def build_love_project(self):
-        os_util.compress_directory(os.getcwd(), "test")
+        # Get the current working directory
+        current_directory = os.getcwd()
+
+        # Get the current directory name
+        directory_name = os.path.basename(current_directory)
+        
+        os_util.compress_directory(current_directory, directory_name)
